@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 html{
@@ -10,37 +9,84 @@ html{
 }
 
 body{
-    background:url("background.jpg") center center/cover no-repeat fixed;
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.75)
+    ),
+    url("images/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
     color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,.015) 3px
+    );
+
+    pointer-events:none;
 }
 
 .overlay{
+
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,0.65);
-    backdrop-filter: blur(3px);
+
+    backdrop-filter:blur(2px);
+
     z-index:-1;
 }
 
-.container{
+.home{
+
     min-height:100vh;
+
     display:flex;
+
+    justify-content:space-between;
+
     align-items:center;
-    padding:50px;
+
+    padding:70px 8%;
 }
 
-.menu{
-    width:350px;
+.logo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:6rem;
+
+    font-weight:700;
+
+    line-height:.9;
 }
 
-.menu h1{
-    font-size:55px;
-    letter-spacing:4px;
-}
+.tagline{
 
-.subtitle{
-    margin-bottom:30px;
-    color:#bbb;
+    color:#bdbdbd;
+
+    margin-top:10px;
+
+    margin-bottom:60px;
+
+    font-size:1.1rem;
 }
 
 .menu ul{
@@ -48,82 +94,162 @@ body{
 }
 
 .menu li{
-    margin:18px 0;
+    margin:28px 0;
 }
 
 .menu a{
+
     color:white;
+
     text-decoration:none;
-    font-size:20px;
-    letter-spacing:2px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:1.8rem;
+
+    letter-spacing:3px;
+
     transition:.3s;
 }
 
 .menu a:hover{
-    color:#d6c089;
-    padding-left:15px;
+
+    color:#d7c089;
+
+    padding-left:20px;
+
+    text-shadow:0 0 15px rgba(255,255,255,.6);
 }
 
-.hero{
-    margin-left:120px;
-}
+.hero h1{
 
-.hero h2{
-    font-size:70px;
+    font-family:'Cinzel',serif;
+
+    font-size:5rem;
+
+    line-height:1;
+
     letter-spacing:4px;
 }
 
 .hero p{
-    color:#ccc;
-    margin-top:10px;
+
+    margin-top:20px;
+
+    color:#cfcfcf;
+
+    font-size:1.1rem;
 }
 
 section{
+
     min-height:100vh;
-    padding:100px;
-    background:#111;
+
+    padding:100px 10%;
+
+    background:#101010;
 }
 
 section:nth-child(even){
-    background:#181818;
+    background:#171717;
 }
 
 section h2{
-    font-size:40px;
-    margin-bottom:30px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:3rem;
+
+    margin-bottom:40px;
 }
 
-.card{
-    background:#222;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:15px;
+.content-box{
+
+    background:#1d1d1d;
+
+    padding:30px;
+
+    border-radius:12px;
 }
 
-.gallery{
+.grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
 }
 
-.gallery img{
+.grid img{
+
     width:100%;
-    border-radius:10px;
-    transition:.4s;
+
+    border-radius:12px;
+
+    transition:.3s;
 }
 
-.gallery img:hover{
+.grid img:hover{
+
     transform:scale(1.05);
 }
 
-#social a{
-    color:#fff;
-    font-size:20px;
-    text-decoration:none;
-    display:inline-block;
-    margin:10px 0;
+.social-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
 }
 
-#social a:hover{
-    color:#d6c089;
+.social-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Cinzel',serif;
+
+    font-size:2rem;
+
+    transition:.3s;
+}
+
+.social-links a:hover{
+
+    color:#d7c089;
+
+    padding-left:15px;
+}
+
+@media(max-width:900px){
+
+    .home{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:flex-start;
+    }
+
+    .logo{
+        font-size:4rem;
+    }
+
+    .hero{
+
+        margin-top:60px;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .menu a{
+        font-size:1.3rem;
+    }
 }
