@@ -1,88 +1,178 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukman Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lukman Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+<audio id="bgm" autoplay loop preload="auto">
+    <source src="audio/ambience.mp3" type="audio/mpeg">
+</audio>
 
 <div class="overlay"></div>
 
-<div class="container">
+<section class="home">
 
     <div class="menu">
-        <h1>PORTFOLIO</h1>
-        <p class="subtitle">Welcome to my digital world</p>
+
+        <div class="logo">
+            PORTFOLIO
+        </div>
+
+        <div class="tagline">
+            Welcome to my digital world
+        </div>
 
         <ul>
-            <li><a href="#about">▢ ABOUT ME</a></li>
-            <li><a href="#certificate">▢ CERTIFICATE</a></li>
-            <li><a href="#gallery">▢ GALLERY</a></li>
-            <li><a href="#project">▢ MY PROJECT</a></li>
-            <li><a href="#social">▢ SOCIAL MEDIA</a></li>
+
+            <li>
+                <a href="#about">
+                    □ ABOUT ME
+                </a>
+            </li>
+
+            <li>
+                <a href="#certificate">
+                    □ CERTIFICATE
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery">
+                    □ GALLERY
+                </a>
+            </li>
+
+            <li>
+                <a href="#project">
+                    □ MY PROJECT
+                </a>
+            </li>
+
+            <li>
+                <a href="#social">
+                    □ SOCIAL MEDIA
+                </a>
+            </li>
+
         </ul>
+
     </div>
 
     <div class="hero">
-        <h2>LUKMAN AL KHAKIM</h2>
-        <p>Web Developer • Gamer • Tech Enthusiast</p>
+
+        <h1>
+            LUKMAN<br>
+            AL<br>
+            KHAKIM
+        </h1>
+
+        <p>
+            Web Developer • Gamer • Tech Enthusiast
+        </p>
+
     </div>
 
-</div>
+</section>
 
 <section id="about">
+
     <h2>About Me</h2>
-    <p>
-        Halo, saya Lukman Al Khakim. Saya memiliki minat di bidang
-        teknologi, web development, dan gaming.
-    </p>
+
+    <div class="content-box">
+
+        <p>
+            Halo, saya Lukman Al Khakim.
+            Saya memiliki minat di bidang teknologi,
+            web development, gaming,
+            dan pengembangan aplikasi modern.
+        </p>
+
+    </div>
+
 </section>
 
 <section id="certificate">
+
     <h2>Certificate</h2>
-    <div class="card">
-        <p>Certificate 1</p>
+
+    <div class="grid">
+
+        <img src="certificates/cert1.jpg">
+        <img src="certificates/cert2.jpg">
+
     </div>
-    <div class="card">
-        <p>Certificate 2</p>
-    </div>
+
 </section>
 
 <section id="gallery">
+
     <h2>Gallery</h2>
-    <div class="gallery">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
+
+    <div class="grid">
+
+        <img src="images/gallery1.jpg">
+        <img src="images/gallery2.jpg">
+        <img src="images/gallery3.jpg">
+
     </div>
+
 </section>
 
 <section id="project">
+
     <h2>My Project</h2>
-    <div class="card">
-        <h3>Project 1</h3>
-        <p>Deskripsi project.</p>
+
+    <div class="content-box">
+
+        <h3>Portfolio Website</h3>
+        <p>Website portfolio dengan tema Resident Evil.</p>
+
+        <br>
+
+        <h3>Project Kedua</h3>
+        <p>Isi project kamu di sini.</p>
+
     </div>
+
 </section>
 
 <section id="social">
+
     <h2>Social Media</h2>
 
-    <a href="https://tiktok.com/@username" target="_blank">
-        TikTok
-    </a><br>
+    <div class="social-links">
 
-    <a href="https://instagram.com/username" target="_blank">
-        Instagram
-    </a><br>
+        <a href="https://tiktok.com/@username" target="_blank">
+            TikTok
+        </a>
 
-    <a href="https://wa.me/628xxxxxxxxxx" target="_blank">
-        WhatsApp
-    </a>
+        <a href="https://instagram.com/username" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://wa.me/6281234567890" target="_blank">
+            WhatsApp
+        </a>
+
+    </div>
+
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
