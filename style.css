@@ -9,12 +9,13 @@ html{
 }
 
 body{
-
     font-family:'Inter',sans-serif;
+    color:#fff;
+    overflow-x:hidden;
 
     background:
     linear-gradient(
-        rgba(0,0,0,.4),
+        rgba(0,0,0,.45),
         rgba(0,0,0,.75)
     ),
     url("images/background.jpg");
@@ -22,15 +23,11 @@ body{
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-
-    color:white;
-    overflow-x:hidden;
 }
 
+/* Film Grain */
 body::before{
-
     content:"";
-
     position:fixed;
     inset:0;
 
@@ -42,214 +39,34 @@ body::before{
     );
 
     pointer-events:none;
+    z-index:999;
 }
 
-.overlay{
-
-    position:fixed;
-    inset:0;
-
-    backdrop-filter:blur(2px);
-
-    z-index:-1;
-}
+/* ===================== */
+/* HOME */
+/* ===================== */
 
 .home{
-
     min-height:100vh;
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
-    padding:70px 8%;
+    padding:0 8%;
+}
+
+.menu{
+    width:45%;
 }
 
 .logo{
-
     font-family:'Cinzel',serif;
-
-    font-size:6rem;
-
+    font-size:7rem;
     font-weight:700;
-
     line-height:.9;
+    letter-spacing:2px;
 }
 
 .tagline{
-
-    color:#bdbdbd;
-
-    margin-top:10px;
-
-    margin-bottom:60px;
-
-    font-size:1.1rem;
-}
-
-.menu ul{
-    list-style:none;
-}
-
-.menu li{
-    margin:28px 0;
-}
-
-.menu a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-family:'Cinzel',serif;
-
-    font-size:1.8rem;
-
-    letter-spacing:3px;
-
-    transition:.3s;
-}
-
-.menu a:hover{
-
-    color:#d7c089;
-
-    padding-left:20px;
-
-    text-shadow:0 0 15px rgba(255,255,255,.6);
-}
-
-.hero h1{
-
-    font-family:'Cinzel',serif;
-
-    font-size:5rem;
-
-    line-height:1;
-
-    letter-spacing:4px;
-}
-
-.hero p{
-
-    margin-top:20px;
-
-    color:#cfcfcf;
-
-    font-size:1.1rem;
-}
-
-section{
-
-    min-height:100vh;
-
-    padding:100px 10%;
-
-    background:#101010;
-}
-
-section:nth-child(even){
-    background:#171717;
-}
-
-section h2{
-
-    font-family:'Cinzel',serif;
-
-    font-size:3rem;
-
-    margin-bottom:40px;
-}
-
-.content-box{
-
-    background:#1d1d1d;
-
-    padding:30px;
-
-    border-radius:12px;
-}
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:20px;
-}
-
-.grid img{
-
-    width:100%;
-
-    border-radius:12px;
-
-    transition:.3s;
-}
-
-.grid img:hover{
-
-    transform:scale(1.05);
-}
-
-.social-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-}
-
-.social-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-family:'Cinzel',serif;
-
-    font-size:2rem;
-
-    transition:.3s;
-}
-
-.social-links a:hover{
-
-    color:#d7c089;
-
-    padding-left:15px;
-}
-
-@media(max-width:900px){
-
-    .home{
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        align-items:flex-start;
-    }
-
-    .logo{
-        font-size:4rem;
-    }
-
-    .hero{
-
-        margin-top:60px;
-    }
-
-    .hero h1{
-        font-size:3.5rem;
-    }
-
-    .menu a{
-        font-size:1.3rem;
-    }
-}
+    margin
